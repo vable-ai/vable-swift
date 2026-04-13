@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'VableSwiftSDK'
+  s.name             = 'VableAI'
   s.version          = '0.0.1'
   s.summary          = 'Vable AI iOS SDK - Real-time voice chat with AI'
   s.description      = <<-DESC
