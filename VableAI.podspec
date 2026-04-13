@@ -7,7 +7,7 @@ Vable AI iOS SDK provides real-time AI voice chat capabilities with WebRTC,
 WebSocket messaging, and screen context scanning.
   DESC
   s.homepage         = 'https://vable.ai'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT' }
   s.author           = { 'Vable AI' => 'support@vable.ai' }
 
   # Downloads the pre-built XCFramework zip directly from the GitHub Release asset.
