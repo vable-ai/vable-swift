@@ -3,19 +3,20 @@ import PackageDescription
 
 // Update binaryURL and binaryChecksum when cutting a new release.
 // The xcframework zip is attached to the GitHub Release for each version tag.
-let binaryURL = "https://github.com/vable-ai/vable-swift/releases/download/0.0.1/VableAI.xcframework.zip"
-let binaryChecksum = "22c41e406829b2be0488a075ac98d2fdeac5b17623b609c268fb3479bd870def"
+let binaryURL =
+    "https://github.com/vable-ai/vable-swift/releases/download/0.0.1/VableAI.xcframework.zip"
+let binaryChecksum = "7e083a92dc170688bfec51ed460609cea3a60ed05d9f95ce331950c184e1a95a"
 
 let package = Package(
     name: "VableAI",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v13)
     ],
     products: [
-        .library(name: "VableAI", targets: ["VableAI"]),
+        .library(name: "VableAI", targets: ["VableAI"])
     ],
     dependencies: [
-        .package(url: "https://github.com/stasel/WebRTC.git", from: "141.0.0"),
+        .package(url: "https://github.com/stasel/WebRTC.git", from: "141.0.0")
     ],
     targets: [
         .binaryTarget(
