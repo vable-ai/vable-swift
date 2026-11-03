@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VableAI'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'Vable AI iOS SDK - Real-time voice chat with AI'
   s.description      = <<-DESC
 Vable AI iOS SDK provides real-time AI voice chat capabilities with WebRTC,
@@ -16,7 +16,7 @@ WebSocket messaging, and screen context scanning.
     :http => "https://github.com/vable-ai/vable-swift/releases/download/#{s.version}/VableAI.xcframework.zip"
   }
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
   s.swift_versions = ['5.0']
 
   s.module_name  = 'VableAI'
