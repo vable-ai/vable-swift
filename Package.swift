@@ -4,7 +4,7 @@ import PackageDescription
 // Update binaryURL and binaryChecksum when cutting a new release.
 // The xcframework zip is attached to the GitHub Release for each version tag.
 let binaryURL =
-    "https://github.com/vable-ai/vable-swift/releases/download/0.0.4/VableAI.xcframework.zip"
+    "https://github.com/vable-ai/vable-swift/releases/download/0.0.5/VableAI.xcframework.zip"
 let binaryChecksum = "eb33ee450cd01763099a62f811caf8848aab25456db68b3abe79d4927a083753"
 
 let package = Package(
@@ -13,22 +13,24 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        .library(name: "VableAI", targets: ["VableAI"])
+        .library(name: "VableAI", targets: ["VableAIWrapper"])
     ],
     dependencies: [
         .package(url: "https://github.com/stasel/WebRTC.git", from: "141.0.0")
     ],
     targets: [
+        // Named like the framework in the zip, so `import VableAI` finds it
         .binaryTarget(
-            name: "VableAIBinary",
+            name: "VableAI",
             url: binaryURL,
             checksum: binaryChecksum
         ),
-        // Thin wrapper so SPM also links WebRTC (required for symbol resolution at app link time)
+        // Thin wrapper so SPM also links WebRTC (required for symbol resolution at app link time).
+        // It needs its own name: called VableAI, it hid the binary's module behind an empty one.
         .target(
-            name: "VableAI",
+            name: "VableAIWrapper",
             dependencies: [
-                "VableAIBinary",
+                "VableAI",
                 .product(name: "WebRTC", package: "WebRTC"),
             ],
             path: "Sources/VableAIStub"
