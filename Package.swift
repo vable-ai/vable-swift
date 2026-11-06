@@ -4,8 +4,8 @@ import PackageDescription
 // Update binaryURL and binaryChecksum when cutting a new release.
 // The xcframework zip is attached to the GitHub Release for each version tag.
 let binaryURL =
-    "https://github.com/vable-ai/vable-swift/releases/download/0.0.5/VableAI.xcframework.zip"
-let binaryChecksum = "eb33ee450cd01763099a62f811caf8848aab25456db68b3abe79d4927a083753"
+    "https://github.com/vable-ai/vable-swift/releases/download/0.0.6/VableAI.xcframework.zip"
+let binaryChecksum = "266eb437d5c6be7509108e39196923f15bf3b3942c0eb8e2360d2529ef87f819"
 
 let package = Package(
     name: "VableAI",
